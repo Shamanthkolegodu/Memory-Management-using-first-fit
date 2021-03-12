@@ -46,6 +46,12 @@ Best Fit: Allocates the smallest sufficient memory block among the available fre
   link : the pointer holding the address of next book keeping node in the linked lists of book keeping nodes
   returned : the pointer pointing to the first allocated block which is returned to the caller.
 
-## Encoded_status : 0 - book, 1 - allocated, 2 - free
-
 ### Fine techniques course @PES University.
+
+## Additional notes:
+
+The code is written in such a way that if mymalloc function is called before allocate function, it returns NULL
+The validity of b pointer passed as parameter to myfree function is not verified
+size_of_structure is defined using #define and is not a global variable, hence cannot be accessed in sanity_client.c
+Due to %ld format specifier in the print statement of size_of_structure in print_book function, compilation is giving a warning to change it to unsigned int.
+But it was not rectified as the print statement was not asked to be changed in the doc file.
