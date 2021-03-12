@@ -33,6 +33,19 @@ Best Fit: Allocates the smallest sufficient memory block among the available fre
    Structure of output:
    Start_address<\t>block_in_bytes<\t>encoded_status<\n>
 
+- Allocation policy used: First Fit method.
+  The memory space is traversed and allocation happens in the first free space that is found on linear traversal from start to end of memory.
+
+- Basic logic used for implementation: Singly linked lists
+  A singly linked list with each node with book-keeping information is created. The memory space is typecasted to structure type wherever necessary
+  for the implementation of the same and consecutive book-keeping nodes connected in a typical singly list fashion.
+
+- Explanation of the book-keeping structure:
+  buffer : number of bytes/blocks allocated or free
+  encoded_flag : 1 - allocated space ; 2 - free space (0 is explicitly print for bookkeeping in print_mem_map() function)
+  link : the pointer holding the address of next book keeping node in the linked lists of book keeping nodes
+  returned : the pointer pointing to the first allocated block which is returned to the caller.
+
 ## Encoded_status : 0 - book, 1 - allocated, 2 - free
 
 ### Fine techniques course @PES University.
