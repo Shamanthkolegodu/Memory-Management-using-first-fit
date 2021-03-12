@@ -46,6 +46,11 @@ Best Fit: Allocates the smallest sufficient memory block among the available fre
   link : the pointer holding the address of next book keeping node in the linked lists of book keeping nodes
   returned : the pointer pointing to the first allocated block which is returned to the caller.
 
+## How to run the program?
+
+- compile using : ```{.c} {gcc -Wall main.c client.c -o main}```
+- run using : ```{.c} {./main}```
+
 ### Fine techniques course @PES University.
 
 ## Additional notes:
