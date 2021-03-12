@@ -48,8 +48,8 @@ Best Fit: Allocates the smallest sufficient memory block among the available fre
 
 ## How to run the program?
 
-- compile using : ```{.c} {gcc -Wall main.c client.c -o main}```
-- run using : ```{.c} {./main}```
+- compile using : `gcc -Wall main.c client.c -o main`
+- run using : `./main`
 
 ### Fine techniques course @PES University.
 
